@@ -7,6 +7,7 @@ import net.oiyou.service.EasyService;
 import net.oiyou.service.impl.EasyGitServiceImpl;
 import org.junit.Test;
 
+import java.io.File;
 import java.util.List;
 
 public class EasyTest {
@@ -43,5 +44,13 @@ public class EasyTest {
         String endPath = "";
 
         easyService.packageChanged(easyFiles,explodedPath,endPath);
+    }
+
+    @Test
+    public void fileTest(){
+        String fileSeparatorReg = File.separator.equals("/") ? File.separator : File.separator + File.separator;
+        String path = "D:\\JetBrains\\workspace\\dream\\target\\dream\\WEB-INF\\classes\\com\\dream\\base\\filter\\shiro\\ShiroPermissionFactory.class";
+        String fileName = path.substring(path.lastIndexOf(File.separator)+1);
+        System.out.println(fileName);
     }
 }
