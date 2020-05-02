@@ -1,6 +1,6 @@
-package net.oiyou.git.porcelain;
+package net.oiyou.temp.git.porcelain;
 
-import net.oiyou.git.helper.CookbookHelper;
+import net.oiyou.helper.CookbookHelper;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.Status;
 import org.eclipse.jgit.api.errors.GitAPIException;
@@ -16,7 +16,7 @@ import java.util.Set;
  */
 public class ListUncommittedChanges {
     public static void main(String[] args) throws IOException, GitAPIException {
-        try (Repository repository = CookbookHelper.openJGitCookbookRepository()) {
+        try (Repository repository = CookbookHelper.openGitCookbookRepository()) {
             System.out.println("Listing uncommitted changes:");
             try (Git git = new Git(repository)) {
                 Status status = git.status().call();

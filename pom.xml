@@ -7,6 +7,7 @@
   <groupId>net.oiyou</groupId>
   <artifactId>easy</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
   <name>easy</name>
 
@@ -14,6 +15,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <jgit.version>5.7.0.202003110725-r</jgit.version>
+    <svn.version>1.10.1</svn.version>
+    <commons-lang.version>3.10</commons-lang.version>
   </properties>
 
   <dependencies>
@@ -22,7 +26,7 @@
     <dependency>
       <groupId>org.eclipse.jgit</groupId>
       <artifactId>org.eclipse.jgit</artifactId>
-      <version>5.7.0.202003110725-r</version>
+      <version>${jgit.version}</version>
     </dependency>
 
 
@@ -30,8 +34,17 @@
     <dependency>
       <groupId>org.tmatesoft.svnkit</groupId>
       <artifactId>svnkit</artifactId>
-      <version>1.10.1</version>
+      <version>${svn.version}</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>${commons-lang.version}</version>
+    </dependency>
+
+
 
     <dependency>
       <groupId>junit</groupId>

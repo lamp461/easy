@@ -1,4 +1,4 @@
-package net.oiyou.git.helper;
+package net.oiyou.helper;
 
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
@@ -11,7 +11,7 @@ import java.io.IOException;
  */
 public class CookbookHelper {
 
-    public static Repository openJGitCookbookRepository() throws IOException {
+    public static Repository openGitCookbookRepository() throws IOException {
         FileRepositoryBuilder builder = new FileRepositoryBuilder();
         return builder
                 .readEnvironment() // scan environment GIT_* variables
